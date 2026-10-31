@@ -38,7 +38,7 @@ def is_allowed_modulus_size(p, allow_test_fixture=False):
     if allow_test_fixture and p == 23:
         return True
 
-    return 16 <= p.bit_length() <= 32
+    return 2 ** 15 <= p < 2 ** 32
 
 def prime_factors(n):
     if not isinstance(n, int):

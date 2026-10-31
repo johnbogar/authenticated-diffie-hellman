@@ -44,7 +44,7 @@ class ReceivedModulusTests(unittest.TestCase):
                 validate_prime(p)
 
     def test_rejects_out_of_range_sizes(self):
-        for p in (5, 32749, 2 ** 32 + 15):
+        for p in (5, 32749, 2 ** 32 + 15, -65521):
             with self.assertRaises(ValueError):
                 validate_prime(p)
 

@@ -9,7 +9,7 @@ The project was written and tested with Python 3.13.7 on macOS. It relies on two
 - **cryptography 47.0.0**, used for Ed25519 signatures
 - **pycryptodome 4.1.0**, used for prime generation and primality validation
 
-Everything else comes from Python's standard library, including `secrets`, `json`, `time`, `platform`, and `unittest`. The square-and-multiply algorithm, factorization of p - 1, generator verification, and the Diffie-Hellman calculations are all implemented by hand rather than with library calls.
+Everything else comes from Python's standard library, including `secrets`, `json`, `time`, and `unittest`. The square-and-multiply algorithm, factorization of p - 1, generator verification, and the Diffie-Hellman calculations are all implemented by hand rather than with library calls.
 
 ## Setup
 
@@ -51,7 +51,7 @@ The automated tests are written with `unittest` and can be run from the project 
 python3 -m unittest discover tests -v
 ```
 
-The tests are separated into five files, following the groups laid out in the project instructions:
+The tests are separated into five files. The first four follow the groups laid out in the project instructions, and the last one covers the attacks from Step 10:
 
 - `test_math.py` covers the fixed mathematical tests for square-and-multiply, factorization, generator verification, and the p = 23 key agreement example.
 - `test_parameters.py` covers the library prime generator wrapper and the validation of a received modulus.

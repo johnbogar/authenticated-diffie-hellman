@@ -1,4 +1,3 @@
-import platform
 import time
 
 import Crypto
@@ -64,8 +63,6 @@ def run_authenticated_attack(alice, bob):
         print("Exchange aborted.")
 
 def run_performance(alice, bob, trials=3):
-    print(f"Python: {platform.python_version()}")
-    print(f"Platform: {platform.platform()}")
     print(f"PyCryptodome: {Crypto.__version__}")
     print(f"cryptography: {cryptography.__version__}")
     print()

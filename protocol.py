@@ -157,7 +157,7 @@ def handle_response(alice, data, allow_test_fixture=False):
     payload, signature = parse_message(data, "response", allow_test_fixture)
     transcript = payload["transcript"]
 
-    for field in ("protocol", "initiator", "responder", "p", "g", "A", "nonce_A"):
+    for field in ("p", "g", "A", "nonce_A"):
         if transcript[field] != session["init_payload"][field]:
             raise ValueError(f"Response field '{field}' does not match the pending session.")
 
